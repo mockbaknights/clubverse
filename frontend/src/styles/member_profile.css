@@ -1,0 +1,113 @@
+/* static/css/member_profile.css */
+/* OVERRIDES FOR MEMBER PROFILE ONLY */
+
+.member-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.member-name {
+  margin: 0;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.5px;
+}
+
+.edit-icon {
+  color: #888;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.edit-icon:hover {
+  color: #ccc;
+}
+
+/* TAB NAV — PLAIN TEXT + UNDERLINE */
+.tab-nav {
+  display: flex !important;
+  gap: 2rem !important;
+  border-bottom: 2px solid #333 !important;
+  padding-bottom: 0.75rem !important;
+  margin-bottom: 1.5rem !important;
+  font-size: 1.1rem !important;
+}
+
+.tab-nav li {
+  list-style: none !important;
+  padding: 0 !important;
+}
+
+.tab-nav a {
+  color: #aaa !important;
+  text-decoration: none !important;
+  font-weight: 500 !important;
+  padding-bottom: 0.5rem !important;
+  border-bottom: 3px solid transparent !important;
+  transition: all 0.2s ease !important;
+}
+
+.tab-nav a:hover {
+  color: #ddd !important;
+}
+
+.tab-nav a.active {
+  color: #4a9eff !important;
+  font-weight: 600 !important;
+  border-bottom: 3px solid #4a9eff !important;
+}
+
+/* CONTENT */
+.profile-card {
+  padding: 2rem !important;
+  color: #e0e0e0 !important;
+  font-family: system-ui, -apple-system, sans-serif !important;
+}
+
+.tab-info {
+  margin: 0 0 1.5rem;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+.tab-info strong {
+  color: #4a9eff;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+}
+
+.transactions-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}
+
+.transactions-table th {
+  text-align: left;
+  padding: 0.75rem 1rem;
+  color: #aaa;
+  border-bottom: 2px solid #333;
+}
+
+.transactions-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.amount-positive { color: #4ade80; }
+.amount-negative { color: #f87171; }
+
+.no-data {
+  color: #888;
+  font-style: italic;
+  margin-top: 1rem;
+}
