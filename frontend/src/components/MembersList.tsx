@@ -6,12 +6,15 @@ type Member = {
   name: string;
 };
 
+
 export default function MembersList() {
   const [members, setMembers] = useState<Member[]>([]);
 
+  console.log("✅ Live folder confirmed");
+
   useEffect(() => {
     setMembers([
-      { name: "Fred Flintstone" },
+      { name: "Fred Flintstoneeeew" },
       { name: "Betty Flintstone" },
       { name: "Charlie Wildberry" },
       { name: "Wilma Stone" },
@@ -61,3 +64,4 @@ export default function MembersList() {
     </div>
   );
 }
+

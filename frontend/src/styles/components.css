@@ -1,3 +1,4 @@
+/* ————— NAVBAR ————— */
 .top-nav {
   display: flex;
   align-items: center;
@@ -9,7 +10,6 @@
   z-index: 100;
 }
 
-/* NEW: let nav-center grow and center itself */
 .nav-center {
   display: flex;
   gap: 2rem;
@@ -17,7 +17,6 @@
   justify-content: center;
 }
 
-/* Optional: keep settings icon tight on the right */
 .settings-icon {
   margin-left: auto;
 }
@@ -54,9 +53,18 @@
   display: block;
 }
 
-/* ————— CARD COMPONENT ————— 
+/* ————— PAGE TITLE ————— */
+.page-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  margin-bottom: var(--space-md);
+  text-align: center;
+}
+
+/* ————— CARD COMPONENT ————— */
 .card {
-  background: var(--color-surface); /* darker card background */
+  background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   padding: 1.5rem;
@@ -67,7 +75,6 @@
   margin-left: auto;
   margin-right: auto;
 }
-*/
 
 .card table {
   width: 100%;
@@ -95,6 +102,87 @@
   background: rgba(255, 255, 255, 0.08);
 }
 
+/* ————— MEMBERS HEADER ROWS ————— */
+.members-table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-md);
+  max-width: 960px;   /* match card width */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.members-count {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+/* Sleek search button */
+.members-search {
+  height: 2.5rem;
+  width: 2.5rem;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--color-text-muted);
+  font-size: 1rem;
+  transition: background-color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.members-search:hover {
+  background-color: var(--color-card);
+  border-color: var(--color-border-dark);
+}
+
+.column-selector {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  cursor: pointer;
+}
+
+/* ————— MEMBERS TABLE ————— */
+.members-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--color-text);
+}
+
+.members-table th,
+.members-table td {
+  padding: var(--space-sm) var(--space-md);
+  text-align: left;
+  vertical-align: middle;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.members-table th {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.members-table tr:hover {
+  background-color: var(--color-card);
+}
+
+.members-table td a {
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.members-table td a:hover {
+  color: var(--color-accent);
+}
+
+/* ————— UTILITIES ————— */
 .btn {
   padding: var(--space-sm) var(--space-md);
   border-radius: var(--radius-sm);
@@ -161,9 +249,11 @@ select {
   background-color: var(--color-accent);
   color: #fff;
 }
+
 .tab-nav li:hover {
   background-color: var(--color-border);
 }
+
 .status-badge {
   padding: 0.25rem 0.5rem;
   border-radius: var(--radius-sm);
@@ -179,9 +269,7 @@ select {
 .status-badge.danger {
   background-color: var(--color-danger);
 }
-.members-table tr:hover {
-  background-color: var(--color-card);
-}
+
 .center-content {
   display: flex;
   flex-direction: column;
@@ -191,83 +279,6 @@ select {
   padding: var(--space-lg) 0;
   min-height: 60vh;
 }
-
-.welcome-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--color-accent);
-  margin-bottom: var(--space-md);
-  text-align: center; /* ← this is the missing piece */
-}
-
-.welcome-subtext {
-  font-size: var(--font-size-lg);
-  color: var(--color-text-muted);
-}
-.members-table td a {
-  color: var(--color-text);              /* off-white in dark theme */
-  text-decoration: none;                 /* removes underline */
-  font-weight: 500;
-  display: inline-block;                 /* avoids baseline artifacts */
-}
-
-.members-table td a:hover {
-  color: var(--color-accent);            /* optional hover accent */
-  text-decoration: none;
-}
-
-.members-table th,
-.members-table td {
-  padding: var(--space-sm) var(--space-md);
-  text-align: left;
-  vertical-align: middle;
-  border-bottom: 1px solid var(--color-border);
-}
-
-.members-table th {
-  font-weight: 600;
-  color: var(--color-text-muted);
-}
-.members-table td a {
-  color: var(--color-text);
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.members-table tr {
-  height: 3rem; /* or use padding if preferred */
-}
-
-.members-table td {
-  padding-top: var(--space-sm);
-  padding-bottom: var(--space-sm);
-}
-
-.members-container {
-  padding: var(--space-lg);
-}
-
-.members-table-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: var(--space-md);
-}
-
-.members-count {
-  font-size: var(--font-size-sm);
-  color: var(--color-text-muted);
-}
-
-.members-search {
-  background-color: var(--color-card);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-sm);
-  padding: 0.5rem 1rem;
-  color: var(--color-text-muted);
-  font-size: var(--font-size-md);
-}
-
 
 .profile-section {
   display: flex;
@@ -286,6 +297,7 @@ select {
 .card-row:last-child {
   border-bottom: none;
 }
+
 .toggle-group {
   display: flex;
   gap: var(--space-md);
@@ -312,21 +324,9 @@ select {
   background-color: var(--color-accent);
   color: #fff;
 }
+
 .grid-3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--space-md);
-}
-
-.card {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  padding: 1.5rem;
-  box-shadow: var(--shadow-card);
-  margin-bottom: var(--space-lg);
-  width: 100%;
-  max-width: 960px;
-  margin-left: auto;
-  margin-right: auto;
 }
