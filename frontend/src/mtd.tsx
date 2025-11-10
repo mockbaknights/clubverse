@@ -1,6 +1,4 @@
 
-import "./styles/components.css";
-
 
 export default function MTD() {
   const members = [

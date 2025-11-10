@@ -1,6 +1,4 @@
 import { useEffect, useState } from "react";
-import "../styles/layout.css";
-import "../styles/components.css";
 
 type Member = {
   name: string;
