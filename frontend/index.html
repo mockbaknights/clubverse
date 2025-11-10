@@ -1,13 +1,63 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>frontend</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clubverse</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { background:#121212; color:#f4f4f4; font-family:-apple-system,system-ui,sans-serif; min-height:100vh; }
+    .topnav { width:100%; padding:1rem 2rem; background:#111; border-bottom:1px solid #333;
+              display:flex; justify-content:space-between; align-items:center; position:relative; }
+    .nav-left { font-weight:bold; font-size:1.2rem; }
+    .nav-center { position:absolute; left:50%; transform:translateX(-50%);
+                  display:flex; gap:2rem; }
+    .nav-center a { color:#ccc; text-decoration:none; font-size:1rem; }
+    .nav-center a:hover { color:#fff; }
+    .nav-right { font-size:1.2rem; }
+    .container { max-width:1200px; margin:2rem auto; padding:0 1rem; }
+    .card { background:#1c1c1c; border-radius:8px; padding:1.5rem;
+            box-shadow:0 2px 6px rgba(0,0,0,.4); }
+    table { width:100%; border-collapse:collapse; margin-top:1rem; }
+    th, td { padding:.75rem 1rem; border-bottom:1px solid #333; text-align:left; }
+    th { background:#1a1a1a; color:#eee; font-weight:600; }
+    a { color:#339cff; text-decoration:none; }
+    a:hover { text-decoration:underline; }
+  </style>
+</head>
+<body>
+
+  <nav class="topnav">
+    <div class="nav-left">Clubverse</div>
+    <div class="nav-center">
+      <a href="#">Home</a>
+      <a href="#">Members</a>
+      <a href="#">Settings</a>
+      <a href="#">MTD</a>
+    </div>
+    <div class="nav-right">Settings Icon</div>
+  </nav>
+
+  <div class="container">
+    <h2 style="text-align:center; margin-bottom:1rem;">Members</h2>
+    <div class="card">
+      <table>
+        <thead><tr><th>Name</th></tr></thead>
+        <tbody>
+          <tr><td><a href="#">Fred Flintstoneeeew</a></td></tr>
+          <tr><td><a href="#">Betty Flintstone</a></td></tr>
+          <tr><td><a href="#">Charlie Wildberry</a></td></tr>
+          <tr><td><a href="#">Wilma Stone</a></td></tr>
+          <tr><td><a href="#">Pebbles Rockwell</a></td></tr>
+          <tr><td><a href="#">Barney Rubble</a></td></tr>
+          <tr><td><a href="#">Dino Dino</a></td></tr>
+          <tr><td><a href="#">Bamm-Bamm</a></td></tr>
+          <tr><td><a href="#">Slate Quarry</a></td></tr>
+          <tr><td><a href="#">Rocky Topspin</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</body>
 </html>
